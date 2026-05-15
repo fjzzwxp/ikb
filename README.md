@@ -1,38 +1,160 @@
-**可迭代知识库 (Iterative Knowledge Base)** 是一个为 OpenClaw 智能体打造的技能插件。它从根本上解决了 AI “每次对话都从头开始” 的痛点——你可以将任意文档（PDF、Word、Markdown）喂给它，它会把内容切分、向量化后存入本地知识库；更重要的是，在你们日常对话中，它能自动识别并沉淀有价值的新信息（比如你的偏好、项目约定、重要结论）。下次你再问相关问题时，它便能从不断成长的“第二大脑”中召回最相关的内容，给出越来越精准的回答。整个知识库运行在你自己的设备上，无需担心数据外泄。
-# 📚 Iterative Knowledge Base (IKB)
+# OpenClaw Continuous Knowledge Base Skill
 
-[![OpenClaw Plugin](https://img.shields.io/badge/OpenClaw-Plugin-6366f1)](https://github.com/openclaw)
-[![Version](https://img.shields.io/github/v/release/fjzzwxp/ikb)](https://github.com/fjzzwxp/ikb/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub license](https://img.shields.io/github/license/openclaw/continuous-knowledge-base)](https://github.com/openclaw/continuous-knowledge-base/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 
-> **让 OpenClaw 拥有持续学习、不断迭代的“第二大脑”**  
-> 支持文档导入 + 对话知识自动沉淀，通过语义级检索让 AI 越用越懂你。
+A powerful continuous learning knowledge base skill for OpenClaw agent framework. This skill enables OpenClaw to maintain an ever-growing knowledge base from files and conversations.
 
-## ✨ 核心特性
+## Features
 
-| 特性 | 说明 |
-|------|------|
-| 📄 多格式文档注入 | 支持 PDF、Word (.docx)、Markdown、纯文本，自动提取文本并智能分块 |
-| 🧠 对话知识自动捕捉 | 自动识别并提炼对话中有价值的信息（偏好、约定、结论），存入知识库 |
-| 🔍 语义检索 | 基于向量 Embedding 检索最相关的内容，支持相似度阈值过滤 |
-| ⚡ 混合检索（可选） | 结合向量语义 + BM25 关键词，提高召回准确度 |
-| 💾 本地向量数据库 | 使用 LanceDB / Chroma，数据完全私有，不上传任何云端 |
-| 🛠️ 开箱即用 | 提供清晰的 Tools（kb_ingest, kb_retrieve, kb_list, kb_delete, kb_summary） |
+- 📚 **Multi-format File Learning**: Extract knowledge from txt, md, json, csv, pdf, docx files
+- 💬 **Conversation Learning**: Automatically extract valuable knowledge from dialogues
+- 🔍 **Intelligent Search**: Keyword matching with relevance ranking
+- 🔄 **Auto Deduplication**: Prevent duplicate knowledge based on content similarity
+- 📊 **Knowledge Management**: Statistics, export, and maintenance tools
+- ⚡ **Extensible Architecture**: Easy to add new file formats and features
 
-## 🎯 适用场景
+## Quick Start
 
-- **个人知识助手**：把散落的笔记、文档、聊天记录变成可检索的知识库
-- **团队内部 FAQ**：上传产品手册、会议纪要，AI 随时回答
-- **长期记忆 Agent**：让 OpenClaw 记住你的偏好、项目背景、历史决策
-- **持续学习系统**：每次对话都沉淀新经验，知识库越用越丰富
-
-## 📦 安装
-
-### 从 GitHub 直接安装（推荐）
+### Installation
 
 ```bash
-# 安装最新版本
-openclaw plugins install git:github.com/fjzzwxp/ikb.git
+git clone https://github.com/openclaw/continuous-knowledge-base.git
+cd continuous-knowledge-base
+```
 
-# 安装指定版本（更稳定）
-openclaw plugins install git:github.com/fjzzwxp/ikb.git@v1.0.0
+### Basic Usage
+
+```bash
+# Learn from files
+python scripts/main.py "学习文件: ./docs/project-overview.md"
+
+# Record knowledge manually
+python scripts/main.py "记录知识: OpenClaw is an agent framework"
+
+# Search knowledge
+python scripts/main.py "查询: Agent"
+
+# View statistics
+python scripts/main.py "统计"
+
+# Export knowledge base
+python scripts/main.py "导出为 json"
+```
+
+### For OpenClaw Agent Integration
+
+```python
+from continuous_knowledge_base import ContinuousKnowledgeBaseSkill
+
+# Initialize skill
+skill = ContinuousKnowledgeBaseSkill()
+
+# Process commands from agent
+result = skill.run("学习文件: ./data/knowledge.txt")
+print(result)
+```
+
+## Project Structure
+
+```
+continuous-knowledge-base/
+├── SKILL.md                    # Skill documentation for OpenClaw
+├── config/
+│   └── config.json             # Configuration file
+├── scripts/
+│   ├── main.py                 # Main entry point
+│   ├── knowledge_base.py       # Core knowledge base implementation
+│   ├── file_processor.py       # File processing utilities
+│   └── conversation_learner.py # Dialogue learning module
+├── knowledge/
+│   └── knowledge_db.json       # Knowledge storage
+└── docs/                       # Documentation files
+```
+
+## Supported Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `学习文件: <path>` | Learn from files | `学习文件: ./docs/readme.md` |
+| `记录知识: <content>` | Record knowledge manually | `记录知识: AI is awesome` |
+| `查询: <keyword>` | Search knowledge base | `查询: machine learning` |
+| `统计` | View statistics | `统计` |
+| `导出为 <format>` | Export knowledge base | `导出为 json` |
+| `查看: <id>` | View knowledge unit detail | `查看: kb_abc123` |
+| `删除: <id>` | Delete knowledge unit | `删除: kb_abc123` |
+
+## Configuration
+
+Edit `config/config.json` to customize behavior:
+
+```json
+{
+  "knowledge_base": {
+    "storage_path": "./knowledge/knowledge_db.json",
+    "similarity_threshold": 0.85,
+    "max_file_size_mb": 10
+  },
+  "learning": {
+    "auto_learn_from_conversation": true,
+    "confidence_threshold": 0.7
+  },
+  "search": {
+    "default_results": 5,
+    "max_results": 20
+  }
+}
+```
+
+## Optional Dependencies
+
+Install additional packages for extended functionality:
+
+```bash
+# PDF support
+pip install pdfplumber
+
+# DOCX support
+pip install python-docx
+
+# Vector search (semantic search)
+pip install sentence-transformers
+```
+
+## Usage Examples
+
+### Learning from Multiple Files
+
+```bash
+python scripts/main.py "学习文件: ./docs/project.md ./docs/api.md"
+```
+
+### Recording with Tags
+
+```bash
+python scripts/main.py "记录知识: OpenClaw uses Skill system for extensibility. 标签为: OpenClaw, Skill, Architecture"
+```
+
+### Search with Result Limit
+
+```bash
+python scripts/main.py "查询: AI 并返回 10 条结果"
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## Support
+
+- GitHub Issues: [https://github.com/openclaw/continuous-knowledge-base/issues](https://github.com/openclaw/continuous-knowledge-base/issues)
+- Documentation: [docs/](docs/)
+
+## Acknowledgments
+
+- Built for OpenClaw Agent Framework
+- Inspired by knowledge management systems

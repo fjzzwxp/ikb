@@ -1,0 +1,29 @@
+{
+  "knowledge_base": {
+    "storage_path": "./knowledge/knowledge_db.json",
+    "vector_enabled": false,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "similarity_threshold": 0.85,
+    "max_file_size_mb": 10,
+    "supported_extensions": [".txt", ".md", ".json", ".pdf", ".docx", ".csv"]
+  },
+  "learning": {
+    "auto_learn_from_conversation": true,
+    "confidence_threshold": 0.7,
+    "min_content_length": 10,
+    "max_knowledge_units_per_file": 100,
+    "extract_conversation_patterns": true
+  },
+  "search": {
+    "default_results": 5,
+    "max_results": 20,
+    "semantic_search": false,
+    "min_similarity_score": 0.3
+  },
+  "logging": {
+    "level": "INFO",
+    "max_log_files": 7,
+    "log_learning_events": true,
+    "log_search_events": true
+  }
+}

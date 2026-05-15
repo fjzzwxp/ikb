@@ -1,0 +1,24 @@
+{
+  "conversation": [
+    {
+      "role": "user",
+      "content": "什么是 OpenClaw？"
+    },
+    {
+      "role": "assistant",
+      "content": "OpenClaw 是一个开源的智能体框架。"
+    },
+    {
+      "role": "user",
+      "content": "它的主要特点有哪些？"
+    },
+    {
+      "role": "assistant",
+      "content": "主要特点是模块化设计、可扩展的 Skill 系统、以及支持多种 AI 模型。"
+    },
+    {
+      "role": "user",
+      "content": "谢谢你的介绍！"
+    }
+  ]
+}

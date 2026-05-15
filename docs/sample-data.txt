@@ -1,0 +1,95 @@
+OpenClaw 智能体框架使用指南
+
+一、什么是 OpenClaw？
+OpenClaw 是一个开源的智能体（Agent）框架，支持通过 Skill 系统扩展功能。
+它使开发者能够快速构建自主 AI 助手。
+
+二、核心概念
+1. Agent（智能体）
+   Agent 是 OpenClaw 的核心，负责协调各个 Skill 执行任务。
+   每个Agent可以拥有多个Skill。
+
+2. Skill（技能）
+   Skill 是可插拔的功能模块，提供特定能力。
+   Skill 之间可以互相调用，形成工作流。
+
+3. Memory（记忆）
+   Memory 模块负责存储对话历史和知识。
+   支持短期记忆和长期记忆。
+
+三、快速开始
+1. 安装 OpenClaw
+   pip install openclaw
+
+2. 创建 Agent
+   from openclaw import Agent
+   agent = Agent(name="MyAssistant")
+
+3. 添加 Skill
+   agent.add_skill(WebSearchSkill())
+   agent.add_skill(FileProcessorSkill())
+
+4. 运行
+   result = agent.run("请搜索最新的AI新闻")
+
+四、配置文件示例
+{
+  "agent": {
+    "name": "MyAssistant",
+    "llm": "gpt-4",
+    "max_tokens": 2000
+  },
+  "skills": [
+    "web_search",
+    "file_processor",
+    "code_executor"
+  ]
+}
+
+五、开发自定义 Skill
+所有 Skill 必须继承 BaseSkill 类，实现 execute 方法。
+
+示例代码：
+from openclaw import BaseSkill
+
+class MySkill(BaseSkill):
+    name = "my_skill"
+    description = "我的自定义技能"
+
+    async def execute(self, params):
+        # 你的实现
+        return {"result": "success"}
+
+六、最佳实践
+- 为 Skill 提供清晰的文档
+- 错误处理要完善
+- 使用日志记录关键操作
+- 定期更新依赖库
+- 测试 Skill 的边界条件
+
+七、常见问题
+Q: Skill 无法加载？
+A: 检查配置文件路径和 Skill 类名是否正确。
+
+Q: 如何调试 Skill？
+A: 使用日志输出，或使用 pdb 进行交互式调试。
+
+Q: 支持并发吗？
+A: OpenClaw 内部使用 asyncio，支持并发处理多个请求。
+
+八、性能优化建议
+1. 使用连接池
+2. 实现缓存
+3. 避免阻塞操作
+4. 合理设置超时
+
+九、安全注意事项
+- 不要硬编码 API 密钥
+- 验证用户输入
+- 限制文件访问权限
+- 定期更新依赖
+
+十、获取帮助
+- GitHub Issues: https://github.com/openclaw/core/issues
+- 文档: https://docs.openclaw.ai
+- Discord: https://discord.gg/openclaw

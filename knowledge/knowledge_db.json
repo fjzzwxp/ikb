@@ -1,0 +1,212 @@
+{
+  "version": "1.0",
+  "created_at": "2026-05-15T13:50:21.586354",
+  "last_updated": "2026-05-15T13:58:08.735515",
+  "total_units": 8,
+  "sources": {
+    "file": 6,
+    "manual": 1,
+    "conversation": 1
+  },
+  "knowledge_units": [
+    {
+      "id": "a6065ea9",
+      "content": "OpenClaw 项目概述 OpenClaw 是一个开源的智能体框架，旨在帮助开发者快速构建和部署自主 AI 助手。 项目使命 我们的使命是创建一个模块化、可扩展、易用的智能体平台，让每个人都能享受到 AI 带来的便利。 核心特性 - ✅ 模块化设计：核心轻量，通过 Skill 扩展功能\n- ✅ 开放生态：易于集成第三方服务\n- ✅ 灵活配置：支持本地和云端多种部署方式\n- ✅ 高性能：并发处理能力强。 技术栈 - 后端: Python 3.9+\n- 通信: RESTful API + WebSocket\n- 存储: SQLite / PostgreSQL / Redis\n- AI 模型: OpenAI GPT、Claude 等（支持自定义模型）\n- 配置管理: JSON/YAML 项目结构 发展路线 - v1.0: 基础框架（已完成）\n- v1.1: 增强 Skill 系统（进行中）\n- v1.2: Web 管理界面（规划中）\n- v2.0: 分布式部署（规划中） 联系我们",
+      "summary": "OpenClaw 项目概述 OpenClaw 是一个开源的智能体框架，旨在帮助开发者快速构建和部署自",
+      "tags": [
+        "规划中",
+        "openclaw",
+        "skill",
+        "项目概述",
+        "是一个开源的智能体框架"
+      ],
+      "source": {
+        "type": "file",
+        "path": "../docs/project-overview.md",
+        "timestamp": "2026-05-15T13:50:21.586354",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 444,
+        "language": "zh-CN",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "a93fa4c6",
+      "content": "- GitHub: github.com/openclaw\n- Discord: discord.gg/openclaw\n- Email: support@openclaw.ai",
+      "summary": "- GitHub: github.com/openclaw\n- Discord: discord.g",
+      "tags": [
+        "openclaw",
+        "github",
+        "discord",
+        "com",
+        "email"
+      ],
+      "source": {
+        "type": "file",
+        "path": "../docs/project-overview.md",
+        "timestamp": "2026-05-15T13:50:21.590088",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 89,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "931eb27d",
+      "content": "OpenClaw Skill 系统是核心组件，每个Skill提供特定功能",
+      "summary": "OpenClaw Skill 系统是核心组件，每个Skill提供特定功能",
+      "tags": [
+        "系统是核心组件",
+        "每个",
+        "提供特定功能",
+        "openclaw",
+        "skill"
+      ],
+      "source": {
+        "type": "manual",
+        "path": null,
+        "timestamp": "2026-05-15T13:50:48.085900",
+        "context": null
+      },
+      "metadata": {
+        "confidence": 0.9,
+        "word_count": 36,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "aa9e7348",
+      "content": "主要特点是模块化设计、可扩展的 Skill 系统、以及支持多种 AI 模型",
+      "summary": "主要特点是模块化设计、可扩展的 Skill 系统、以及支持多种 AI 模型",
+      "tags": [
+        "Skill"
+      ],
+      "source": {
+        "type": "conversation",
+        "path": null,
+        "timestamp": "2026-05-15T13:57:00.798065",
+        "context": "对话ID: test_conv_20260515"
+      },
+      "metadata": {
+        "confidence": 0.7,
+        "word_count": 37,
+        "language": "zh-CN",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "ad940fba",
+      "content": "OpenClaw 智能体框架使用指南 一、什么是 OpenClaw？\nOpenClaw 是一个开源的智能体（Agent）框架，支持通过 Skill 系统扩展功能。\n它使开发者能够快速构建自主 AI 助手。 二、核心概念\n1. Agent（智能体）\n   Agent 是 OpenClaw 的核心，负责协调各个 Skill 执行任务。\n   每个Agent可以拥有多个Skill。 2. Skill（技能）\n   Skill 是可插拔的功能模块，提供特定能力。\n   Skill 之间可以互相调用，形成工作流。 3. Memory（记忆）\n   Memory 模块负责存储对话历史和知识。\n   支持短期记忆和长期记忆。 三、快速开始\n1. 安装 OpenClaw\n   pip install openclaw 2. 创建 Agent\n   from openclaw import Agent\n   agent = Agent(name=\"MyAssistant\")",
+      "summary": "OpenClaw 智能体框架使用指南 一、什么是 OpenClaw？\nOpenClaw 是一个开源的",
+      "tags": [
+        "openclaw",
+        "agent",
+        "skill",
+        "memory",
+        "智能体框架使用指南"
+      ],
+      "source": {
+        "type": "file",
+        "path": "./docs/sample-data.txt",
+        "timestamp": "2026-05-15T13:58:08.701817",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 434,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "c5d75a5a",
+      "content": "3. 添加 Skill\n   agent.add_skill(WebSearchSkill())\n   agent.add_skill(FileProcessorSkill()) 4. 运行\n   result = agent.run(\"请搜索最新的AI新闻\") 四、配置文件示例\n{\n  \"agent\": {\n    \"name\": \"MyAssistant\",\n    \"llm\": \"gpt-4\",\n    \"max_tokens\": 2000\n  },\n  \"skills\": [\n    \"web_search\",\n    \"file_processor\",\n    \"code_executor\"\n  ]\n} 五、开发自定义 Skill\n所有 Skill 必须继承 BaseSkill 类，实现 execute 方法。 示例代码：\nfrom openclaw import BaseSkill class MySkill(BaseSkill):\n    name = \"my_skill\"\n    description = \"我的自定义技能\"",
+      "summary": "3. 添加 Skill\n   agent.add_skill(WebSearchSkill())\n ",
+      "tags": [
+        "agent",
+        "skill",
+        "baseskill",
+        "name",
+        "添加"
+      ],
+      "source": {
+        "type": "file",
+        "path": "./docs/sample-data.txt",
+        "timestamp": "2026-05-15T13:58:08.706087",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 478,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "752e8b2d",
+      "content": "async def execute(self, params):\n        # 你的实现\n        return {\"result\": \"success\"} 六、最佳实践\n- 为 Skill 提供清晰的文档\n- 错误处理要完善\n- 使用日志记录关键操作\n- 定期更新依赖库\n- 测试 Skill 的边界条件 七、常见问题\nQ: Skill 无法加载？\nA: 检查配置文件路径和 Skill 类名是否正确。 Q: 如何调试 Skill？\nA: 使用日志输出，或使用 pdb 进行交互式调试。 Q: 支持并发吗？\nA: OpenClaw 内部使用 asyncio，支持并发处理多个请求。 八、性能优化建议\n1. 使用连接池\n2. 实现缓存\n3. 避免阻塞操作\n4. 合理设置超时 九、安全注意事项\n- 不要硬编码 API 密钥\n- 验证用户输入\n- 限制文件访问权限\n- 定期更新依赖",
+      "summary": "async def execute(self, params):\n        # 你的实现\n  ",
+      "tags": [
+        "skill",
+        "你的实现",
+        "最佳实践",
+        "提供清晰的文档",
+        "错误处理要完善"
+      ],
+      "source": {
+        "type": "file",
+        "path": "./docs/sample-data.txt",
+        "timestamp": "2026-05-15T13:58:08.709479",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 396,
+        "language": "zh-CN",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "ab8d9bfb",
+      "content": "十、获取帮助\n- GitHub Issues: https://github.com/openclaw/core/issues\n- 文档: https://docs.openclaw.ai\n- Discord: https://discord.gg/openclaw",
+      "summary": "十、获取帮助\n- GitHub Issues: https://github.com/opencla",
+      "tags": [
+        "https",
+        "openclaw",
+        "github",
+        "issues",
+        "discord"
+      ],
+      "source": {
+        "type": "file",
+        "path": "./docs/sample-data.txt",
+        "timestamp": "2026-05-15T13:58:08.734749",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 133,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    }
+  ],
+  "embeddings": {
+    "enabled": false
+  }
+}

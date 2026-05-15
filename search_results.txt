@@ -1,0 +1,28 @@
+Query: agent
+Results: 2
+
+[1] 3. 添加 Skill
+   agent.add_skill(WebSearchSkill())
+ 
+    Score: 0.2844
+    Tags: ['agent', 'skill', 'baseskill', 'name', '添加']
+    Content: 3. 添加 Skill
+   agent.add_skill(WebSearchSkill())
+   agent.add_skill(FileProcessorSkill()) 4. 运行
+   result = agent.run("请搜索最新的AI新闻") 四、配置文件示例
+{
+  "agent": {
+    "name": "MyAssistant",
+    "llm": "gpt-4...
+
+[2] OpenClaw 智能体框架使用指南 一、什么是 OpenClaw？
+OpenClaw 是一个开源的
+    Score: 0.2673
+    Tags: ['openclaw', 'agent', 'skill', 'memory', '智能体框架使用指南']
+    Content: OpenClaw 智能体框架使用指南 一、什么是 OpenClaw？
+OpenClaw 是一个开源的智能体（Agent）框架，支持通过 Skill 系统扩展功能。
+它使开发者能够快速构建自主 AI 助手。 二、核心概念
+1. Agent（智能体）
+   Agent 是 OpenClaw 的核心，负责协调各个 Skill 执行任务。
+   每个Agent可以拥有多个Skill。 2. Skill（技...
+

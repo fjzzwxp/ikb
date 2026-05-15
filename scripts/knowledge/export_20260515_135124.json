@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "export_time": "2026-05-15T13:51:24.042253",
+  "total_units": 3,
+  "knowledge_units": [
+    {
+      "id": "a6065ea9",
+      "content": "OpenClaw 项目概述 OpenClaw 是一个开源的智能体框架，旨在帮助开发者快速构建和部署自主 AI 助手。 项目使命 我们的使命是创建一个模块化、可扩展、易用的智能体平台，让每个人都能享受到 AI 带来的便利。 核心特性 - ✅ 模块化设计：核心轻量，通过 Skill 扩展功能\n- ✅ 开放生态：易于集成第三方服务\n- ✅ 灵活配置：支持本地和云端多种部署方式\n- ✅ 高性能：并发处理能力强。 技术栈 - 后端: Python 3.9+\n- 通信: RESTful API + WebSocket\n- 存储: SQLite / PostgreSQL / Redis\n- AI 模型: OpenAI GPT、Claude 等（支持自定义模型）\n- 配置管理: JSON/YAML 项目结构 发展路线 - v1.0: 基础框架（已完成）\n- v1.1: 增强 Skill 系统（进行中）\n- v1.2: Web 管理界面（规划中）\n- v2.0: 分布式部署（规划中） 联系我们",
+      "summary": "OpenClaw 项目概述 OpenClaw 是一个开源的智能体框架，旨在帮助开发者快速构建和部署自",
+      "tags": [
+        "规划中",
+        "openclaw",
+        "skill",
+        "项目概述",
+        "是一个开源的智能体框架"
+      ],
+      "source": {
+        "type": "file",
+        "path": "../docs/project-overview.md",
+        "timestamp": "2026-05-15T13:50:21.586354",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 444,
+        "language": "zh-CN",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "a93fa4c6",
+      "content": "- GitHub: github.com/openclaw\n- Discord: discord.gg/openclaw\n- Email: support@openclaw.ai",
+      "summary": "- GitHub: github.com/openclaw\n- Discord: discord.g",
+      "tags": [
+        "openclaw",
+        "github",
+        "discord",
+        "com",
+        "email"
+      ],
+      "source": {
+        "type": "file",
+        "path": "../docs/project-overview.md",
+        "timestamp": "2026-05-15T13:50:21.590088",
+        "context": "自动分割"
+      },
+      "metadata": {
+        "confidence": 1.0,
+        "word_count": 89,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    },
+    {
+      "id": "931eb27d",
+      "content": "OpenClaw Skill 系统是核心组件，每个Skill提供特定功能",
+      "summary": "OpenClaw Skill 系统是核心组件，每个Skill提供特定功能",
+      "tags": [
+        "系统是核心组件",
+        "每个",
+        "提供特定功能",
+        "openclaw",
+        "skill"
+      ],
+      "source": {
+        "type": "manual",
+        "path": null,
+        "timestamp": "2026-05-15T13:50:48.085900",
+        "context": null
+      },
+      "metadata": {
+        "confidence": 0.9,
+        "word_count": 36,
+        "language": "en",
+        "version": 1,
+        "related_ids": []
+      }
+    }
+  ]
+}

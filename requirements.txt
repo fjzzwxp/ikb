@@ -1,0 +1,20 @@
+# Core dependencies
+# No external dependencies required for basic functionality
+
+# Optional dependencies for extended file format support
+# Uncomment as needed:
+
+# PDF support
+# pdfplumber>=0.8.0
+
+# DOCX support
+# python-docx>=0.8.11
+
+# Vector search (semantic search)
+# sentence-transformers>=2.2.0
+# torch>=1.9.0
+
+# Development and testing
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=4.0.0
