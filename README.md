@@ -1,6 +1,6 @@
 # OpenClaw Continuous Knowledge Base Skill
 
-[![GitHub license](https://img.shields.io/github/license/openclaw/continuous-knowledge-base)](https://github.com/openclaw/continuous-knowledge-base/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/fjzzwxp/ikb)](https://github.com/fjzzwxp/ikb/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 
 A powerful continuous learning knowledge base skill for OpenClaw agent framework. This skill enables OpenClaw to maintain an ever-growing knowledge base from files and conversations.
