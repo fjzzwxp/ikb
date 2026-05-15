@@ -19,8 +19,8 @@ A powerful continuous learning knowledge base skill for OpenClaw agent framework
 ### Installation
 
 ```bash
-git clone https://github.com/openclaw/continuous-knowledge-base.git
-cd continuous-knowledge-base
+git clone https://github.com/fjzzwxp/ikb.git
+cd ikb
 ```
 
 ### Basic Usage
